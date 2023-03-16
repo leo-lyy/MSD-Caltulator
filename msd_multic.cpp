@@ -15,18 +15,13 @@ double dis(long int k)
 {
     double ans;
     ans=pow(dumpi[k].x-dump0[k].x,2)+pow(dumpi[k].y-dump0[k].y,2)+pow(dumpi[k].z-dump0[k].z,2);
-    ans=sqrt(ans);
+    //ans=sqrt(ans);
     return ans;
 }
 int main()
 {
     long long num, maxstep;
     int tarchain,tarnum,endchain;
-    // cout<<"Please enter dump file name:"<<endl;
-    // char name[50];
-    // ifstream fp;
-    // cin>>name;
-    // freopen(name,"r",stdin);
 
     cout << "Please enter dump file name:" << endl;
     string name;
@@ -47,12 +42,12 @@ int main()
     inputFile>>num;
     getline(inputFile,x);
     cout<<"The number of total atom in this dump file is"<<endl<<num<<endl
-        <<"Please enter the number of total and steps"<<endl;
+        <<"Please enter the number of total steps"<<endl;
     cin>>maxstep;
     cout<<endl<<"Please enter the start and the end chain number to track:"<<endl;
     cin>>tarchain;
     cin>>endchain; 
-
+    cout<<"Cauculating... "<<endl<<"Step"<<"    "<<"MSD"<<endl;
     long long step,a;
   
     int t=1,p=1;
