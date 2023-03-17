@@ -104,7 +104,7 @@ int main()
     freopen("msd.txt","w",stdout);
     for(long int i=1;i<=maxstep;i++)
     {
-        cout<<timestep[i+1]<<"      ";
+        cout<<timestep[i]<<"      ";
         printf("%.6f",msd[i]);
         cout<<endl;
     }
